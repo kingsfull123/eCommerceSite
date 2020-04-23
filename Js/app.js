@@ -1,6 +1,6 @@
 // Display 10 basketball shoes using JavaScript
 const productsContainer = document.querySelector(".products-container");
-
+productsContainer.style.cssText = "height: 100vh; padding-top: 60px";
 const products = document.createElement("div");
 products.className = "products";
 products.style.cssText =
@@ -11,6 +11,10 @@ for (let i = 0; i < data.length; i++) {
   productContainer.className = "product-container";
   const productImg = document.createElement("img");
   productImg.className = "product-img";
+
+  const productBtn = document.createElement("button");
+  productBtn.className = "product-btn";
+  productBtn.textContent = "add to cart";
 
   const productDescription = document.createElement("h4");
   productDescription.className = "product-description";
@@ -24,6 +28,7 @@ for (let i = 0; i < data.length; i++) {
   productContainer.appendChild(productImg);
   productContainer.appendChild(productDescription);
   productContainer.appendChild(productPrice);
+  productContainer.appendChild(productBtn);
 
   products.appendChild(productContainer);
 }

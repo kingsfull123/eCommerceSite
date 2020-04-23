@@ -19,12 +19,26 @@ img {
 
 /* Header */
 
-.header {
-  background: rgba(186, 186, 186, 0.8); /* fallback for old browsers */
-
-  position: absolute;
+.navbar {
+  /* background: rgba(186, 186, 186, 0.99);  */
+  background: #eb3349#eb3349; 
+  background: -webkit-linear-gradient(to right, #f45c43, #eb3349); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #f45c43,
+    #eb3349
+  );
+  position: fixed;
   width: 100%;
+  transition: opacity .5s ease-out;
+  opacity: 0;
+  z-index: 1;
 }
+
+.navbar__show {
+  opacity: 1;
+}
+
 
 .wrapper {
   max-width: 1490px;
@@ -46,6 +60,7 @@ img {
   border-radius: 10px;
 }
 
+
 .logo-container img {
   width: 80px;
   height: 70px;
@@ -63,7 +78,7 @@ img {
 
 .nav-container ul li a {
   text-decoration: none;
-  color: RGB(255, 65, 78);
+  color: #000;
   padding-right: 76px;
   font-weight: bold;
   display: block;
@@ -76,6 +91,11 @@ img {
   float: right;
   padding-top: 27px;
   position: relative;
+  
+}
+
+.cart-container:hover {
+  cursor: pointer;
 }
 
 .cart {
@@ -103,6 +123,7 @@ img {
   position: relative;
   width: 100%;
   height: 100vh;
+  
 }
 
 .hero--title {
@@ -143,7 +164,7 @@ img {
   right: 0;
   bottom: 0;
   z-index: -1;
-  background-color: rgba(210, 78, 87, .15);
+  background-color: rgba(210, 78, 87, .18);
 }
 
 /* End of Background */
@@ -152,16 +173,14 @@ img {
 
 .products-container {
   width: 100%
-  height: 100%;
-  background: #abbaab; 
-  background: -webkit-linear-gradient(to right, #ffffff, #abbaab); /* Chrome 10-25, Safari 5.1-6 */
+  height: auto;
+  background: #ddd6f3; 
+  background: -webkit-linear-gradient(to right, #faaca8, #ddd6f3); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(
     to right,
-    #ffffff,
-    #abbaab
+    #faaca8,
+    #ddd6f3
   ); 
-
- 
 }
 
 .products {
@@ -179,7 +198,62 @@ img {
   text-align: center;
   color： #898989;
   font-size: 20px;
-  padding: 10px;
+  position: relative;
+}
+
+.product-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 30px;
+  background-color: gold;
+  opacity: 0;
+  transition: all .3s ease-out;
+  border-radius: 3px;
+  box-shadow: 10px 10px 10px #ccc;
+}
+
+.product-container:hover .product-btn{  
+  opacity: 1;
+  cursor: pointer;
 }
 
 /* End of Products */
+
+/* Start of Shopping Cart */
+
+.shopping-cart {
+  position: fixed;
+  width: 400px;
+  height: 100%;
+  top: 0;
+  left: -400px;
+  bottom: 0;
+  background: #eb3349#eb3349; 
+  background: -webkit-linear-gradient(to right, #f45c43, #eb3349); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #f45c43,
+    #eb3349
+  ); 
+  opaicty: 0;
+  transition: all .8s ease-out;
+  z-index: 3;
+}
+
+.slide-in {
+  left: 0;
+  opaicty: 1;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: #000;
+  width: 50px;
+  height: 50px;
+}
+
+/* End of Shopping Cart */
