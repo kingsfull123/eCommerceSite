@@ -13,7 +13,7 @@ const data = [
   },
   {
     id: 3,
-    descrption: "Kyrie-low-by-you-Basketball-Shoe",
+    description: "Kyrie-low-by-you-Basketball-Shoe",
     price: 245,
     src: "./images/products/Kyrie-low-by-you-Basketball-Shoe.jpg",
   },
@@ -45,7 +45,7 @@ const data = [
     id: 8,
     description: "zoom-freak-1-multi-basketball-shoe",
     price: 145,
-    src: "./images/products/air-max-impact-basketball-shoe.jpg",
+    src: "./images/products/zoom-freak-1-multi-basketball-shoe.jpg",
   },
   {
     id: 9,
